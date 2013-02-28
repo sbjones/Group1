@@ -1,0 +1,28 @@
+﻿#ctries_set2 {
+
+position:relative;
+left: 80px;
+top: -60px;
+margin-right:570px;}
+
+div.seating {
+	
+position:absolute;
+left:420px;
+top:320px;
+}
+
+div.CC_No {
+	text-align:left;
+	position:relative;
+	left: 130px;
+	top: -40px;
+}
+
+#no_of_people {
+	position:relative;
+	left: 120px;
+	top: -18px;
+	margin-right:900px;
+	text-align:right;
+	}

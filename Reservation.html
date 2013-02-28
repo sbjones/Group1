@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Reservation</title>
+<link href="style_Resrv.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<h2>Reservation</h2>
+<form name="frmResrv">
+<table>
+<tr><td>First Name</td><td>Last Name</td>
+</tr>
+<tr><td>
+<input type="text" name="txtFName" size="14" /></td>
+<td><input type="text" name="txtLName" size="14" /></td>
+</tr>
+<tr><td>Address 
+</td><td>Phone Number</td>
+</tr>
+<tr><td>
+<input type="text" name="txtAddr" size="14" /></td>
+<td><input type="text" name="txtPhonNum" size="14" /></td>
+</tr>
+</table>
+
+Email<br /><input type="text" name="txtEmail" size="14" /><br /><br />
+<div id="ctries_set1">
+<input type="checkbox" name="chkCtry" value="Germany"/>Germany <br />
+<input type="checkbox" name="chkCtry" value="Italy"/>Italy <br />
+<input type="checkbox" name="chkCtry" value="France"/>France
+</div>
+<div id="ctries_set2">
+<input type="checkbox" name="chkCtry" value ="Austria"/>Austria<br />
+<input type="checkbox" name="chkCtry" value="Switzerland"/>Switzerland
+</div>
+departure date/time <input type="text" name="txtddate" size="14"/> / <input type="text" name="txtdtime" size="14"/><br />
+length of trip <input type="text" name="txtFrm" value="from" size="14"/><input type="text" name="txtTo" value="to" size="14"/><br />
+<br />Number of people 
+<div id="no_of_people">
+Adults <input type="text" name="txtNo_Ad" size="2"/><br />
+Children <input type="text" name="txtNo_Child" size="2" />
+</div>
+<div class="seating">
+Please select which class of travel you wish to fly:<br />
+<input type="radio" name="radClass" value="First" />First class<br />
+<input type="radio" name="radClass" value="PremEcon" />Premium economy<br />
+<input type="radio" name="radClass" value="Econ" />Economy
+</div>
+<br />
+credit card number <br />
+expiration date 
+<div class="CC_No">
+<input type="text" name="txtCC_No" size="20" /><br />
+<input type="text" name="txtCC_Exp" size="5" />
+</div>
+</form>
+</body>
+</html>

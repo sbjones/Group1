@@ -5,10 +5,96 @@
 <title>Reservation</title>
 <link href="style_Resrv.css" type="text/css" rel="stylesheet" />
 </head>
-
 <body>
+<script type="text/javascript">
+<!--
+function validate()
+{
+  if(document.frmResrv.txtFName.value == "")
+	{
+		alert("Please enter your first name.")
+	}
+	
+	if(document.frmResrv.txtLName.value == "")
+	{
+		alert("Please enter your last name.")
+	}
+	
+	if(document.frmResrv.txtAddr.value == "")
+	{
+		alert("Please enter your address.")
+	}
+	
+	if(document.frmResrv.txtPhonNum.value == "" || document.frmResrv.txtPhonNum.value.length < 10)
+	{
+		alert("Please enter a valid phone number.")
+	}
+	
+	var email = document.frmResrv.txtEmail.value;
+	var atPos = email.indexOf("@");
+    var dotPos = email.indexOf(".");
+    if (atPos < 1 || ( dotPos - atPos < 2 )) 
+    {
+       alert("Please enter a valid email.")
+    }
+	
+	var country = document.getElementsByTagName('chkCtry');
+	var boxChecked = false;
+    for (var i = 0; i<country.length; i++)
+	{
+        if (country[i].type=='checkbox')
+        {
+            if (country[i].checked)
+			{
+				boxChecked= true
+			}
+        }
+    }
+    return boxChecked;
+	if(boxChecked == false)
+	{
+		alert("Please select one or more countries to visit.")
+	}
+	
+	//validate departure/length of trip here
+	
+	if(document.txtNo_Ad.value < 1 && document.txtNo_Child < 1)
+	{
+		alert("Please enter a valid number of passengers.")
+	}
+	
+	var radioButtons = document.frmCompetition.radClass;
+	var radioSelected = false;
+	for(var i = 0; i<radioButtons.length; i++)
+	{
+		if(radioButtons[i].checked)
+		{
+			radioSelected = true;
+			returnValue = true;
+		}
+	}
+	if(radioSelected == false)
+	{
+		returnValue=false;
+		alert("Please select which class you would like to fly.")
+	}	
+	
+	if(doucemnt.frmResrv.txtCC_No.value =="")
+	{
+		alert("Please enter a credit carn number.")
+	}
+	
+	var slashPos = document.frmResrv.txtCC_Exp.indexOf("/");
+	if(document.frmResrv.txtCC_Exp.value =="" || slashPos != 2)
+	{
+		alert("Please enter the expiration date in the correct format.")
+	}	
+}
+-->
+</script>
+
 <h2>Reservation</h2>
-<form name="frmResrv">
+<form name="frmResrv" action="home_page.html" method="post" onSubmit="return (validate());">
 <table>
 <tr><td>First Name</td><td>Last Name</td>
 </tr>
@@ -27,6 +113,7 @@
 
 Email<br /><input type="text" name="txtEmail" size="14" /><br /><br />
 <div id="ctries_set1">
+Countries to visit:<br />
 <input type="checkbox" name="chkCtry" value="Germany"/>Germany <br />
 <input type="checkbox" name="chkCtry" value="Italy"/>Italy <br />
 <input type="checkbox" name="chkCtry" value="France"/>France
@@ -36,24 +123,32 @@ Email<br /><input type="text" name="txtEmail" size="14" /><br /><br />
 <input type="checkbox" name="chkCtry" value="Switzerland"/>Switzerland
 </div>
 departure date/time <input type="text" name="txtddate" size="14"/> / <input type="text" name="txtdtime" size="14"/><br />
-length of trip <input type="text" name="txtFrm" value="from" size="14"/><input type="text" name="txtTo" value="to" size="14"/><br />
-<br />Number of people 
+length of trip <input type="text" name="txtFrom" value="from" size="14"/><input type="text" name="txtTo" value="to" size="14"/><br />
+<br />
+<br />
 <div id="no_of_people">
+<br />Number of passengers <br />
+<br />
+
 Adults <input type="text" name="txtNo_Ad" size="2"/><br />
 Children <input type="text" name="txtNo_Child" size="2" />
 </div>
 <div class="seating">
+<br />
 Please select which class of travel you wish to fly:<br />
 <input type="radio" name="radClass" value="First" />First class<br />
 <input type="radio" name="radClass" value="PremEcon" />Premium economy<br />
 <input type="radio" name="radClass" value="Econ" />Economy
 </div>
 <br />
-credit card number <br />
-expiration date 
 <div class="CC_No">
+credit card number <br />
 <input type="text" name="txtCC_No" size="20" /><br />
+expiration date (mm/yy) <br />
 <input type="text" name="txtCC_Exp" size="5" />
+</div>
+<div class="submit" align=center>
+<input type="submit" name ="btnSubmit" value="Submit Reservation" />
 </div>
 </form>
 </body>

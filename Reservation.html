@@ -110,43 +110,43 @@ function validate()
 <td><input type="text" name="txtPhonNum" size="14" /></td>
 </tr>
 </table>
-
 Email<br /><input type="text" name="txtEmail" size="14" /><br /><br />
+
 <div id="ctries_set1">
-Countries to visit:<br />
 <input type="checkbox" name="chkCtry" value="Germany"/>Germany <br />
 <input type="checkbox" name="chkCtry" value="Italy"/>Italy <br />
-<input type="checkbox" name="chkCtry" value="France"/>France
-</div>
+<input type="checkbox" name="chkCtry" value="France"/>France</div>
 <div id="ctries_set2">
 <input type="checkbox" name="chkCtry" value ="Austria"/>Austria<br />
 <input type="checkbox" name="chkCtry" value="Switzerland"/>Switzerland
 </div>
-departure date/time <input type="text" name="txtddate" size="14"/> / <input type="text" name="txtdtime" size="14"/><br />
-length of trip <input type="text" name="txtFrom" value="from" size="14"/><input type="text" name="txtTo" value="to" size="14"/><br />
-<br />
-<br />
-<div id="no_of_people">
-<br />Number of passengers <br />
-<br />
-
-Adults <input type="text" name="txtNo_Ad" size="2"/><br />
-Children <input type="text" name="txtNo_Child" size="2" />
-</div>
+<br /><br /><br />
 <div class="seating">
-<br />
 Please select which class of travel you wish to fly:<br />
 <input type="radio" name="radClass" value="First" />First class<br />
 <input type="radio" name="radClass" value="PremEcon" />Premium economy<br />
 <input type="radio" name="radClass" value="Econ" />Economy
 </div>
-<br />
+
+departure: <br />
+date <input type="text" name="txtddate" size="14"/> time <input type="text" name="txtdtime" size="14"/><br />
+length of trip:<br />
+from <input type="text" name="txtFrom" size="14"/> to <input type="text" name="txtTo" size="14"/>
+<div id="no_of_people">
+<table>
+<tr>
+<td>Number of passengers:</td><td>Adults <input type="text" name="txtNo_Ad" size="2"/></td></tr>
+<tr><td></td><td>Children <input type="text" name="txtNo_Child" size="2" /></td></tr>
+</table>
+</div>
+<!--
 <div class="CC_No">
 credit card number <br />
 <input type="text" name="txtCC_No" size="20" /><br />
 expiration date (mm/yy) <br />
 <input type="text" name="txtCC_Exp" size="5" />
 </div>
+-->
 <div class="submit" align=center>
 <input type="submit" name ="btnSubmit" value="Submit Reservation" />
 </div>

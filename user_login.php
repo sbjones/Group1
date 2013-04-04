@@ -10,8 +10,9 @@ if (isset($_POST['submit'])) {
 
      if (mysql_num_rows($result) == 1)
      {
-          $_SESSION['user_logged'] = $_POST['username'];
+     	  $_SESSION['user_logged'] = $_POST['username'];
           $_SESSION['user_password'] = $_POST['password'];
+          $_SESSION['refresh'] = 1
           header ("Refresh: 5; URL=" . $_POST['redirect'] . "");
           echo "You are being redirected to your original page request!<br>";
           echo "(If your browser doesn't support this, " .
@@ -38,9 +39,9 @@ if (isset($_POST['submit'])) {
 }
 else
 {
-if ($_SERVER['HTTP_REFERER'] == "" || $_SERVER['HTTP_REFERER'] == "http://localhost/account.php")
+if ($_SERVER['HTTP_REFERER'] == "" || $_SERVER['HTTP_REFERER'] == "account.php")
 {
-$redirect = "http://localhost/account.php";
+$redirect = "account.php";
 }
 else
 {

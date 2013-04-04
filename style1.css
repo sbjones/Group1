@@ -1,0 +1,71 @@
+﻿/* CSS layout */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#masthead {
+	min-width: 600px;
+}
+
+#logo {
+	float: left;
+	width: 100px;
+}
+
+#header {
+	margin-left:100px;
+}
+
+#container {
+	clear: both;
+	height:670px;
+	margin:5px;
+}
+
+#top_col {
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	margin:inherit;
+	float: top;
+	padding:5px;
+	background-color:#CCC;
+	border-style:solid;
+	border-width:thin;
+}
+a.hidden {
+	display:none;
+}
+
+#right_col {
+	margin:inherit;
+	background-color:#CCC;
+	float: right;
+	padding: 5px;
+	width: 120px;
+	border-style:solid;
+	border-width:thin;
+}
+
+#page_content {
+	margin-right: 145px;
+	margin-left: 5px;
+	margin-top:10px;
+}
+
+#footer {
+	clear: both;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+#table {
+	background-color:#efefef;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000;
+}
+
+td{padding:5px;}

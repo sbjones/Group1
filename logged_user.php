@@ -12,6 +12,7 @@ $results = mysql_query($query)
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
+
 </head>
 <body>
 <h2><?php

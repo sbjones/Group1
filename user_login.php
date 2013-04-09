@@ -26,25 +26,24 @@ if (isset($_POST['submit'])) {
           Invalid Username and/or Password<br>
           Not registered? <a href="register.php">Click here</a> to register.<br>
           <form action="user_login.php" method="post">
-          <input type="hidden" name="redirect" value="<?php echo $_POST['redirect'];
-               ?>">
+          <input type="hidden" name="redirect" value="<?php echo $_POST['redirect']; ?>">
           Username: <input type="text" name="username"><br>
           Password: <input type="password" name="password"><br><br>
           <input type="submit" name="submit" value="Login">
           </form>
           </body></html>
-<?
+<?php
      }
 }
 else
 {
-if ($_SERVER['HTTP_REFERER'] == "" || $_SERVER['HTTP_REFERER'] == "http://localhost/account.php")
+if (isset($_GET['redirect']))
 {
-$redirect = "http://localhost/account.php";
+$redirect = $_GET['redirect'];
 }
 else
 {
-$redirect = $_GET['redirect'];
+$redirect = "account.php";
 }
 ?>
      <html>
@@ -54,7 +53,7 @@ $redirect = $_GET['redirect'];
      Login below by supplying your username/password...<br>
      Or <a href="register.php">click here</a> to register.<br><br>
      <form action="user_login.php" method="post">
-     <input type="hidden" name="redirect" value="<? echo $redirect; ?>">
+     <input type="hidden" name="redirect" value="<?php echo $redirect; ?>">
      Username: <input type="text" name="username"><br>
      Password: <input type="password" name="password"><br><br>
      <input type="submit" name="submit" value="Login">

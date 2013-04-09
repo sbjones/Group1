@@ -55,7 +55,7 @@ else { ?>
 	<a class ="hidden" href="Flight_Schedule.html" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Flight_Schedule.jpg" alt="Flight Schedule" /></a>
 	<a class ="hidden" href="EuroRail.html" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Eurorailpasses.jpg" alt="Buy eurorail passes" /></a>
 	<a href="About.html" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/About.jpg" alt="About Euro-Travel" /></a>
-	<a class ="hidden" href="Checkout.html" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Checkout.jpg" alt="Checkout" /></a>
+	<a class ="hidden" href="flightshop.php" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Checkout.jpg" alt="Checkout" /></a>
 	</ul>
 	
     <div id="right_col">

@@ -52,7 +52,7 @@ else { ?>
         <a href="account.php" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Account.jpg" alt="Account" /></a>
 	<a class ="hidden" href="Reservation.html" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Reservations.jpg" alt="Reservations" /></a>
 	<a href="Fare_Structure.html"  onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Fare structure information.jpg" alt="Fare Structure" /></a>
-	<a class ="hidden" href="Flight_Schedule.html" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Flight_Schedule.jpg" alt="Flight Schedule" /></a>
+	<a class ="hidden" href="Flight_Schedule.php" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Flight_Schedule.jpg" alt="Flight Schedule" /></a>
 	<a class ="hidden" href="EuroRail.html" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Eurorailpasses.jpg" alt="Buy eurorail passes" /></a>
 	<a href="About.html" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/About.jpg" alt="About Euro-Travel" /></a>
 	<a class ="hidden" href="flightshop.php" onClick="iframeSource('iframe1', this.href); return false"><img src="../Images/Checkout.jpg" alt="Checkout" /></a>

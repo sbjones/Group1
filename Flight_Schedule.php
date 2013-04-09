@@ -9,6 +9,13 @@
 $flights = mysql_connect("141.210.25.53", "root", "george10") or die(mysql_error());
 mysql_select_db("flights", $flights);
 ?>
+
+ <?php
+   $flight_query = "SELECT * FROM `flight_schedule`";
+   $result = mysql_query($flight_query)
+      or die("Invalid query: " . mysql_error());
+   while( $row = mysql_fetch_array($result, MYSQL_ASSOC) ){
+	?>
 <body>
 <h2>Flight Schedule</h2>
 
@@ -18,7 +25,7 @@ mysql_select_db("flights", $flights);
 </div>
 <div id="origin">
 Origin: <select name="selOrigin">
-  <option="selected" value="">Select Departure location</option>
+	<option="selected" value="">Select Departure location</option>
     <option value="Austria">Austria</option>
     <option value="France">France</option>
     <option value="Germany">Germany</option>
@@ -38,5 +45,35 @@ Destination: <select name="selDestination">
 	<option value="Switzerland">Switzerland</option>
     </select>
     </div>
+    <br/>
+    <div id="Submit">
+    <input type="submit" name="Submit" value="Check Schedule" />
+    </div>
+    <br/>
+    
+    <table border=1 width="300" cellspacing=1 cellpadding=3 bgcolor="#353535" align="center">
+    <td bgcolor="#999999" colspan=2 align="center">
+    Origin
+    </td>
+    <td bgcolor="#999999" colspan=2 align="center">
+    Destination
+    </td>
+    <td bgcolor="#999999" colspan=2 align="center">
+    Depart time
+    </td>
+    <td bgcolor="#999999" colspan=2 align="center">
+    Arrival Time
+    </td>
+    <td bgcolor="#999999" colspan=2 align="center">
+    Status
+    </td>
+    <tr bgcolor="#000000">
+    	<td bgcolor="#FFFFFF">
+        	
+        </td>
+    </tr>
+    </table>
+            
+   
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conn.inc.php";
+include "config.php";
 define("USERNAME","root");
 define("PASSWORD","");
 ?>

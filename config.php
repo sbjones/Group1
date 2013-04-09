@@ -1,4 +1,4 @@
 <?php
-$conn = mysql_connect("localhost", "cpfeger2", "george10") or die(mysql_error());
-$db = mysql_select_db("cpfeger2_...") or die(mysql_error());
+$conn = mysql_connect("141.210.25.53", "root", "george10") or die(mysql_error());
+mysql_select_db("cpfeger2_...", $conn) or die(mysql_error());
 ?>

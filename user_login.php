@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conn.inc.php";
+include "config.php";
 if (isset($_POST['submit'])) {
      $query = "SELECT username, password FROM user_info " .
       		  "WHERE username = '" . $_POST['username'] . "' " .

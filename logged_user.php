@@ -1,5 +1,5 @@
 <?php
-include "conn.inc.php";
+include "config.php";
 $query = "SELECT username, first_name FROM user_info " .
 		 "WHERE username = '" . $_SESSION['user_logged'] . "';";
 		 

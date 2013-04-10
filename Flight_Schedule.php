@@ -45,9 +45,19 @@ Destination: <select name="selDestination">
 	<option value="Switzerland">Switzerland</option>
     </select>
     </div>
+    
+    <script type="text/javascript">
+	function check_locations()
+	{
+		if(document.getElementByName(selDestination).value == document.getElementsByName(selOrigin).value)
+		{
+			alert("The origin and destination can not be the same.");
+		}
+	}
+    </script>
     <br/>
     <div id="Submit">
-    <input type="submit" name="Submit" value="Check Schedule" />
+    <input type="submit" name="Submit" value="Check Schedule" onclick="check_locations()" />
     </div>
     <br/>
     

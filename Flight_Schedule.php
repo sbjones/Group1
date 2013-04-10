@@ -5,17 +5,6 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Flight Schedule</title>
 </head>
-<?php
-$flights = mysql_connect("141.210.25.53", "root", "george10") or die(mysql_error());
-mysql_select_db("flights", $flights);
-?>
-
- <?php
-   $flight_query = "SELECT * FROM `flight_schedule`";
-   $result = mysql_query($flight_query)
-      or die("Invalid query: " . mysql_error());
-   while( $row = mysql_fetch_array($result, MYSQL_ASSOC) ){
-	?>
 <body>
 <h2>Flight Schedule</h2>
 
@@ -49,7 +38,7 @@ Destination: <select name="selDestination">
     <script type="text/javascript">
 	function check_locations()
 	{
-		if(document.getElementByName(selDestination).value == document.getElementsByName(selOrigin).value)
+		if(document.getElementByName('selDestination').value == document.getElementsByName('selOrigin').value)
 		{
 			alert("The origin and destination can not be the same.");
 		}
@@ -61,29 +50,57 @@ Destination: <select name="selDestination">
     </div>
     <br/>
     
-    <table border=1 width="300" cellspacing=1 cellpadding=3 bgcolor="#353535" align="center">
-    <td bgcolor="#999999" colspan=2 align="center">
+    
+<?php
+$flights = mysql_connect("141.210.25.53", "root", "george10") or die(mysql_error());
+mysql_select_db("flight_schedule", $flights);
+?>
+    <table border=1 width="300" cellspacing=1 cellpadding=2 bgcolor="#353535" align="center">
+    <td bgcolor="#999999" colspan=1 align="center">
     Origin
     </td>
-    <td bgcolor="#999999" colspan=2 align="center">
+    <td bgcolor="#999999" colspan=1 align="center">
     Destination
     </td>
-    <td bgcolor="#999999" colspan=2 align="center">
+    <td bgcolor="#999999" colspan=1 align="center">
     Depart time
     </td>
-    <td bgcolor="#999999" colspan=2 align="center">
+    <td bgcolor="#999999" colspan=1 align="center">
     Arrival Time
     </td>
-    <td bgcolor="#999999" colspan=2 align="center">
+    <td bgcolor="#999999" colspan=1 align="center">
     Status
     </td>
-    <tr bgcolor="#000000">
+    
+   <?php
+   $flight_query = "SELECT * FROM `flightData'";
+   $result = mysql_query($flight_query)
+      or die("Invalid query: " . mysql_error());
+   while( $row = mysql_fetch_array($result, MYSQL_ASSOC) ){
+   ?>
+	   
+	<tr bgcolor="#000000" colspan=1 align="center">
     	<td bgcolor="#FFFFFF">
-        	
-        </td>
-    </tr>
-    </table>
-            
-   
+        	<?php echo $row['origin'] ?>
+        </td>  
+        
+        <td bgcolor="#FFFFFF">
+        	<?php echo $row['destination'] ?>
+        </td>  
+        <td bgcolor="#FFFFFF">
+        	<?php echo $row['departTime'] ?>
+        </td> 
+        <td bgcolor="#FFFFFF">
+        	<?php echo $row['arrivalTime'] ?>
+        </td> 
+        <td bgcolor="#FFFFFF">
+        	<?php echo $row['status'] ?>
+        </td>  
+    </tr>  
+   <?php
+   }
+   ?>
+	
+    </table>  
 </body>
 </html>

@@ -1,14 +1,15 @@
 ﻿#ctries_set1 {
 	
-margin-right:500px;
+margin-right:300px;
 position:absolute;
 top:210px;
+left:350px;
 }
 
 #ctries_set2 {
 
 position:absolute;
-left: 120px;
+left: 440px;
 top: 210px;
 margin-right:30px;
 }
@@ -30,7 +31,7 @@ div.CC_No {
 }
 
 #no_of_people {
-	margin-right:500px;
+	margin-right:800px;
 	text-align:right;
 	position:relative;
 	top:-75px;
